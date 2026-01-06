@@ -1,0 +1,7 @@
+import random
+
+friends = ["Alice", "Bob", "Charlie", "David", "Emanuel"]
+print("Banker Roulette")
+
+random_friend = random.choice(friends)
+print(f"\n{random_friend} has to pay the bill")
