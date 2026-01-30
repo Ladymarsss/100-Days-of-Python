@@ -1,0 +1,15 @@
+def is_leap_year(year):
+    four = year % 4 
+    hundred = year % 100 
+    four_hundred = year % 400
+    
+    if four != 0:
+        return False
+    elif four == 0 and hundred != 0:
+        return True
+    elif four == 0 and hundred == 0 and four_hundred == 0:
+        return True
+    else:
+        return False
+        
+print(is_leap_year(2000))
