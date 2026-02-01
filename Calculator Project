@@ -1,0 +1,48 @@
+import art
+print(art.logo)
+
+# This was guided by course instructor
+
+def add(n1, n2):
+    return n1 + n2
+
+def subtract(n1, n2):
+    return n1 - n2
+
+def multiply(n1, n2):
+    return n1 * n2
+
+def divide(n1, n2):
+    return n1 / n2
+
+operations = {
+        "+": add,
+        "-": subtract,
+        "*": multiply,
+        "/": divide
+}
+# Guided until this part, the rest was all solved by myself.
+
+def calculation(n1, n2, operation):
+    chosen_operation = operations[operation]
+    if chosen_operation in operations:
+        for operator in operations:
+            if "+" in operator:
+                chosen_operation(n1, n2)
+            elif "-" in operator:
+                chosen_operation(n1, n2)
+            elif "*" in operator:
+                chosen_operation(n1, n2)
+            elif "/" in operator:
+                chosen_operation(n1, n2)
+    result = chosen_operation(n1, n2)
+    print(f"{n1:.2f} {operation} {n2:.2f} = {chosen_operation(n1, n2):.2f}")
+    continue_calculation = input(f"Type 'y' to continue calculation with {chosen_operation(n1, n2):.2f}, or type 'n' to start a new calculation: ".lower())
+    if continue_calculation == "y":
+        n1 = result
+        calculation(n1, operation = input("+\n-\n*\n/\nPick an operation: "), n2 = float(input("What's the next number?: ")))
+    elif continue_calculation == "n":
+        print("\n" * 100, art.logo)
+        calculation(n1=float(input("What's the first number?: ")), operation=input("+\n-\n*\n/\nPick an operation: "), n2=float(input("What's the next number?: ")))
+calculation(n1 = float(input("What's the first number?: ")), operation = input("+\n-\n*\n/\nPick an operation: "), n2 = float(input("What's the next number?: ")))
+
