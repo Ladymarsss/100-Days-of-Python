@@ -5,6 +5,7 @@ import random
 def easy_mode():
 # Pick a random number from the range 1-100
     answer = random.choice(range(1, 101))
+    print(answer)
     attempt_number = 10
     game_over = False
 # While number is not guessed keep asking to guess
@@ -17,6 +18,13 @@ def easy_mode():
             if play_again == "":
                 print("\n" * 100)
                 game_start()
+# ZERO ATTEMPTS, LOST THE GAME.
+        if attempt_number == 1:
+            game_over = True
+            play_again2 = input("You've ran out of guesses.\nPlay Again? Press 'ENTER'")
+            if play_again2 == "":
+                print("\n" * 100)
+                game_start()
 # GUESSED WRONG, TOO HIGH.
         elif guess > answer:
             game_over = False
@@ -27,13 +35,7 @@ def easy_mode():
             game_over = False
             attempt_number -= 1
             print("Too Low")
-# ZERO ATTEMPTS, LOST THE GAME.
-        elif attempt_number == 0:
-            game_over = True
-            play_again2 = input("You've ran out of guesses.\nPlay Again? Press 'ENTER'")
-            if play_again2 == "":
-                print("\n"*100)
-                game_start()
+
 
 #HARD CAME MODE FUNCTION
 def hard_mode():
@@ -51,6 +53,13 @@ def hard_mode():
             if play_again == "":
                 print("\n"*100)
                 game_start()
+#ZERO ATTEMPTS, LOST THE GAME.
+        if attempt_number == 1:
+            game_over = True
+            play_again2 = input("You've ran out of guesses.\nPlay Again? Press 'ENTER'")
+            if play_again2 == "":
+                print("\n"*100)
+                game_start()
 #GUESSED WRONG, TOO HIGH.
         elif guess > answer:
             game_over = False
@@ -61,13 +70,7 @@ def hard_mode():
             game_over = False
             attempt_number -= 1
             print("Too Low")
-#ZERO ATTEMPTS, LOST THE GAME.
-        elif attempt_number == 0:
-            game_over = True
-            play_again2 = input("You've ran out of guesses.\nPlay Again? Press 'ENTER'")
-            if play_again2 == "":
-                print("\n"*100)
-                game_start()
+
 
 #START SCREEN & DIFFICULTY OPTION
 def game_start():
