@@ -43,4 +43,4 @@ Below is a short video preview of the game in action:
 
 https://github.com/user-attachments/assets/8219278f-7d0b-4ab5-a174-7c7666006f4d
 ```md
-![Game Preview](preview.mp4)
+[▶️ Watch game preview](preview.mp4)
