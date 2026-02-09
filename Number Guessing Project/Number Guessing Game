@@ -1,0 +1,82 @@
+import art
+import random
+
+#EASY GAME MODE FUNCTION
+def easy_mode():
+# Pick a random number from the range 1-100
+    answer = random.choice(range(1, 101))
+    attempt_number = 10
+    game_over = False
+# While number is not guessed keep asking to guess
+    while not game_over:
+        guess = int(input(f"You have {attempt_number} attempts remaining to guess the number.\nMake a guess:\n"))
+# ANSWER GUESSED, WIN!
+        if guess == answer:
+            game_over = True
+            play_again = input(f"You got it! The answer was {answer}\nPlay Again? Press 'ENTER' ")
+            if play_again == "":
+                print("\n" * 100)
+                game_start()
+# GUESSED WRONG, TOO HIGH.
+        elif guess > answer:
+            game_over = False
+            attempt_number -= 1
+            print("Too High")
+# GUESSED WRONG, TOO LOW.
+        elif guess < answer:
+            game_over = False
+            attempt_number -= 1
+            print("Too Low")
+# ZERO ATTEMPTS, LOST THE GAME.
+        elif attempt_number == 0:
+            game_over = True
+            play_again2 = input("You've ran out of guesses.\nPlay Again? Press 'ENTER'")
+            if play_again2 == "":
+                print("\n"*100)
+                game_start()
+
+#HARD CAME MODE FUNCTION
+def hard_mode():
+# Pick a random number from the range 1-100
+    answer = random.choice(range(1, 101))
+    attempt_number = 5
+    game_over = False
+#While number is not guessed keep asking to guess
+    while not game_over:
+        guess = int(input(f"You have {attempt_number} attempts remaining to guess the number.\nMake a guess:\n"))
+#ANSWER GUESSED, WIN!
+        if guess == answer:
+            game_over = True
+            play_again = input(f"You got it! The answer was {answer}\nPlay Again? Press 'ENTER' ")
+            if play_again == "":
+                print("\n"*100)
+                game_start()
+#GUESSED WRONG, TOO HIGH.
+        elif guess > answer:
+            game_over = False
+            attempt_number -= 1
+            print("Too High")
+#GUESSED WRONG, TOO LOW.
+        elif guess < answer:
+            game_over = False
+            attempt_number -= 1
+            print("Too Low")
+#ZERO ATTEMPTS, LOST THE GAME.
+        elif attempt_number == 0:
+            game_over = True
+            play_again2 = input("You've ran out of guesses.\nPlay Again? Press 'ENTER'")
+            if play_again2 == "":
+                print("\n"*100)
+                game_start()
+
+#START SCREEN & DIFFICULTY OPTION
+def game_start():
+    print(art.logo)
+    print("Welcome to the Number Guessing Game!\nI'm thinking of a number between 1 and 100.")
+    # Choose gaming difficulty
+    game_mode = input("Choose a difficulty. Type 'easy' or 'hard':\n").lower()
+    if game_mode == "easy":
+        easy_mode()
+    elif game_mode == "hard":
+        hard_mode()
+game_start()
