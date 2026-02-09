@@ -40,8 +40,6 @@ The project was created by observing a demo of the game and recreating the logic
 
 ## 🎬 Preview
 Below is a short video preview of the game in action:
+https://github.com/user-attachments/assets/8219278f-7d0b-4ab5-a174-7c7666006f4d
 
-https://github.com/user-attachments/assets/7c17a6ab-f4ff-4ec6-ac6f-3ce93f755b84
 
-```md
-![Game Preview](preview.mp4)
