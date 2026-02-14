@@ -21,8 +21,10 @@ A simple program where the turtle moves in random directions and creates a color
 - RGB colors
 
 🎥 Preview:
+
 https://github.com/user-attachments/assets/f596d223-03b6-4330-8ee8-968be56898df
-[Watch Random Walk Demo](previews/random-walk.mp4)
+
+![Random Walk Preview](previews/random-walk.mp4)
 
 ---
 
