@@ -38,7 +38,9 @@ A program that draws multiple geometric shapes (from triangle up to higher-sided
 - Repetition patterns
 
 🎥 Preview:
+
 https://github.com/user-attachments/assets/1f2858dd-b146-428f-8854-b1889ec7bf66
+
 ![7 Shapes Preview](previews/7-shapes.mp4)
 
 ---
@@ -53,7 +55,9 @@ A basic dashed line drawing using alternating forward movement and pen control.
 - Step-based logic
 
 🎥 Preview:
+
 https://github.com/user-attachments/assets/6effc31b-a2ac-41d5-9246-0c2fb0355e43
+
 ![Dashed Line Preview](previews/dashed-line.mp4)
 
 ---
@@ -69,7 +73,9 @@ A program that draws a colorful spirograph-style pattern by repeatedly drawing c
 - Mathematical thinking with degrees
 
 🎥 Preview:
+
 https://github.com/user-attachments/assets/d44305ca-2fa0-4d11-84f3-c818311f63ab
+
 ![Spirograph Preview](previews/spirograph.mp4)
 
 ---
